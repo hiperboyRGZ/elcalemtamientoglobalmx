@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Videos sobre Calentamiento Global</title>
+    <style>
+        body {
+            background-color: #1791c6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #2c3e50;
+            margin: 20px 0;
+        }
+        .video {
+            width: 60%;
+            margin: 20px 0;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer; /* Cambio: agregar cursor pointer */
+        }
+        video {
+            width: 100%;
+            border-radius: 5px;
+        }
+        p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1><a href="El calentamiento global.html">Videos sobre Calentamiento Global</a></h1>
+    <div class="video" onclick="togglePlay(this)">
+        <h2>CALENTAMIENTO GLOBAL: CAUSAS y CONSECUENCIAS</h2>
+        <video controls>
+            <source src="video 1 cg.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p>Este video explica las causas y consecuencias del calentamiento global. Puedes verlo en este <a href="https://youtu.be/umAGi80FsPM" target="_blank">enlace</a>.</p>
+    </div>
+    <div class="video" onclick="togglePlay(this)">
+        <h2>IMPACTOS DEL CALENTAMIENTO GLOBAL</h2>
+        <video controls>
+            <source src="video 2 cg.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p>Descubre los impactos del calentamiento global en este <a href="https://youtu.be/umAGi80FsPM" target="_blank">enlace</a>.</p>
+    </div>
+    <div class="video" onclick="togglePlay(this)">
+        <h2>SOLUCIONES CONTRA EL CALENTAMIENTO GLOBAL</h2>
+        <video controls>
+            <source src="video 3 cg.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p>Conoce algunas soluciones contra el calentamiento global aquí <a href="https://youtu.be/umAGi80FsPM" target="_blank">enlace</a>.</p>
+    </div>
+    <div class="video" onclick="togglePlay(this)">
+        <h2>EL FUTURO DEL CLIMA</h2>
+        <video controls>
+            <source src="video 4 cg.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p>Explora las predicciones climáticas futuras en este <a href="https://youtu.be/umAGi80FsPM" target="_blank">enlace</a>.</p>
+    </div>
+    <div class="video" onclick="togglePlay(this)">
+        <h2>DEBATE SOBRE EL CALENTAMIENTO GLOBAL</h2>
+        <video controls>
+            <source src="video 5 cg.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <p>Participa en el debate sobre el calentamiento global viendo este <a href="https://youtu.be/umAGi80FsPM" target="_blank">enlace</a>.</p>
+    </div>
+
+    <script>
+        function togglePlay(element) {
+            var video = element.querySelector('video');
+            if (video.paused) video.play();
+            else video.pause();
+        }
+    </script>
+</body>
+</html>
