@@ -1,0 +1,127 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Foro sobre el Calentamiento Global</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #forum-container {
+            width: 50%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .comment {
+            background: #ecf0f1;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        .comment img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+            float: left;
+        }
+        .reactions {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .emoji {
+            cursor: pointer;
+            font-size: 24px;
+            margin-right: 5px;
+        }
+        input[type="text"], textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="forum-container">
+        <h1>Comentarios sobre el Calentamiento Global</h1>
+        <div id="comments-section">
+            <!-- Los comentarios se agregarán aquí dinámicamente -->
+        </div>
+        <div class="new-comment">
+            <input type="text" id="username" placeholder="Nombre de usuario" style="margin-bottom: 10px;">
+            <textarea id="commentText" placeholder="Escribe un comentario..."></textarea>
+            <input type="submit" value="Comentar" onclick="addComment()">
+        </div>
+    </div>
+    <script>
+        const profilePictures = [
+            'https://cdn-icons-png.flaticon.com/512/147/147142.png',
+            'https://cdn-icons-png.flaticon.com/512/147/147144.png',
+            'https://cdn-icons-png.flaticon.com/512/147/147140.png'
+        ];
+
+        function addComment() {
+            const username = document.getElementById('username').value;
+            const commentText = document.getElementById('commentText').value;
+            const profilePicURL = profilePictures[Math.floor(Math.random() * profilePictures.length)];
+
+            if (commentText.trim() !== '' && username.trim() !== '') {
+                const newComment = `
+                    <div class="comment">
+                        <img src="${profilePicURL}" alt="Profile Picture">
+                        <strong>${username}</strong>
+                        <p>${commentText}</p>
+                        <div class="reactions">
+                            <span class="emoji" onclick="addReaction(this, 'like')">&#128077; <span>0</span></span>
+                            <span class="emoji" onclick="addReaction(this, 'dislike')">&#128078; <span>0</span></span>
+                            <span class="emoji" onclick="addReaction(this, 'laugh')">&#128514; <span>0</span></span>
+                        </div>
+                    </div>
+                `;
+                document.getElementById('comments-section').innerHTML += newComment;
+                document.getElementById('username').value = ''; // Clear username field
+                document.getElementById('commentText').value = ''; // Clear comment field
+            } else {
+                alert('Por favor, completa tu nombre y comentario.');
+            }
+        }
+
+        function addReaction(element, type) {
+            let countElement = element.getElementsByTagName('span')[0];
+            let currentCount = parseInt(countElement.textContent);
+            countElement.textContent = currentCount + 1;
+        }
+    </script>
+</body>
+</html>

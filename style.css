@@ -1,0 +1,138 @@
+#main-title {
+    text-align: center; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+} 
+body {
+    background-image: url('imagen/planet.jpg'); 
+    background-size: cover; 
+    background-position: center;
+}
+
+h1 {
+    font-size: 85px; 
+    margin-top: 20px; 
+}#search-container {
+    float: right; 
+    margin-top: -100px; 
+    margin-right: 20px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 25px;
+    display: flex; 
+    align-items: center; 
+    padding: 5px 10px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+}
+
+#search-input {
+    flex-grow: 1; 
+    padding: 8px 10px; 
+    border: none; 
+    border-radius: 20px 0 0 20px;
+    outline: none; 
+}
+
+#search-button {
+    padding: 8px 16px; 
+    background-color: #007BFF; 
+    color: white; 
+    border: none;
+    border-radius: 0 20px 20px 0; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#search-button:hover {
+    background-color: #0056b3; 
+}
+
+#contenido {
+    position: relative; 
+    margin-top: 20px; 
+}
+
+#contenido {
+position: relative;
+height: 100vh; 
+}
+
+#contenido p {
+font-weight: bold;
+font-size: 45px;
+text-align: center;
+color: rgb(56, 121, 185);
+width: 52%; 
+margin: -450px auto 20px; 
+}
+
+
+#contenido video {
+width: 350px;
+height: 200px;
+margin-left: 25px;
+display: block; 
+margin-bottom: 10px; 
+}
+
+#contenido img {
+width: 150px;
+height: auto;
+display: block; 
+margin-left: 25px; 
+margin-bottom: 20px;
+}
+
+
+
+
+.info-box,
+.info-box2,
+.info-box3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgb(78, 200, 227);
+    color: rgb(40, 43, 130);
+    padding: 10px;
+    border-radius: 5px;
+}
+.info-box2 {
+    bottom: 55px;
+}
+.info-box3 {
+    bottom: 100px;
+}
+.comment-section {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgb(0, 102, 0); 
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    width: 400px;  
+}
+
+#search-container {
+    position: relative;
+    display: inline-block;
+}
+
+#search-results {
+    position: absolute;
+    top: 40px; 
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: white;
+    z-index: 1000; 
+}
+
+.search-result-item {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.search-result-item:hover {
+    background-color: #f0f0f0;
+}
